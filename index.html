@@ -6,111 +6,148 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <link rel="stylesheet" href="index.css">
     <script src="https://kit.fontawesome.com/567a7f488b.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" type='text/css' href="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css" />
     <title>Rémy Guillery Développeur Web et Web Mobile</title>
   
 </head>
 <body>
     <header>
         <nav>
-            <a href="index.html" class="logo">logo</a>
+            <!-- <a href="index.html" class="logo">logo</a> -->
             <!--burger menu for responsive-->
             <div class="toggle"></div>
             <ul class="menu">
-                <li class="active"><a href="index.html" class="Accueil-btn">Accueil</a></li>
-                <li><a href="#about">A propos</a></li>
-                <li><a href="#services">Services</a></li>
+                <li><a href="#">À propos</a></li>
+                <li><a href="#experience">Experience</a></li>
+                <li><a href="#education">Education</a></li>
+                <li><a href="#skills">Compétences</a></li>
                 <li><a href="#portfolio">Portfolio</a></li>
                 <li><a href="#contact-form">Contact</a></li>
             </ul>
-            <div class="language">
+            <!-- <div class="language">
                 <a href="#">En</a>
                 <a href="#">Es</a>
-            </div>
+            </div> -->
         </nav>
     </header>
     <main>
 <!--Presentation------------------->
-        <div class="speech">
-            <p>Bonjour,</p>
-            <h1>Je suis <em class="name"> Rémy</em></h1>
-            <p class="description"> Ex-commercial converti en développeur web, je troque les discours de vente pour des lignes 
-                de code percutantes. De la conquête des clients à la conquête du web, je mets ma passion pour la création au 
-                service de votre expérience en ligne.
-            </p>
-            <a href="CV_Rémy_Guillery.pdf" target="_blank" rel="noopener noreferrer" class="cv-btn">Mon Cv</a>
-        </div>
-        <div class="social">
-            <a href="https://www.linkedin.com/in/r%C3%A9my-guillery-52938b138/" target="_blank" rel="noopener noreferrer"><i class="fab fa-linkedin"></i></a>
-            <a href="#"><i class="fab fa-instagram"></i></a>
-        </div>
-<!--About------------------->
-       <Section id="about">
-            <div class="about-text">
-                <h1>A propos</h1>
-                <h2> Je suis un développeur full-stack</h2>
-                <p>Je développe des applications web et sites web côtés client et serveur.
-                    Mon objectif est de vous offrir des solutions numériques afin de développer votre présence en ligne et d'améliorer 
-                    la qualité des services que vous proposez à vos clients.
+        <section id="about">
+            <div class="speech">
+                <p>Bonjour,</p>
+                <h1>Je suis <em class="name"> Rémy</em></h1>
+                <p class="description"> Ex-commercial converti en développeur web, je troque les discours de vente pour des lignes 
+                    de code percutantes. De la conquête des clients à la conquête du web, je mets ma passion pour la création au 
+                    service de votre expérience en ligne. Je suis assionné par le développement Web et les nouvelles technologies et suis à la recherche de nouveaux défis.
                 </p>
-                <!--<button>Plus en détail</button>-->
-            </div>
-            <div class="about-model">
-                <!--<img alt="model" src="image/bg-profile.png"/>	-->
+                <div class="networks">
+                    <a href="CV_Remy_Guillery.pdf" target="_blank" rel="noopener noreferrer" class="cv-btn" aria-label="Télécharger mon CV">Mon Cv</a>
+                    <a class="social" href="https://www.linkedin.com/in/r%C3%A9my-guillery-52938b138/" target="_blank" rel="noopener noreferrer" aria-label="Lien vers mon profil LinkedIn"><i class="fab fa-linkedin" aria-hidden="true"></i></a>
+                    <a class="social" href="https://github.com/RRRemsss" target="_blank" rel="noopener noreferrer" aria-label="Lien vers mon profil GitHub"><i class="fa-brands fa-github" aria-hidden="true"></i></a>
+                </div>
             </div>
         </section>
-<!--services------------------->
-        <section id="services">
-            <!--heading----------------------------------->
-                <div class="s-heading">
-                <h1>Services</h1>
-                <p>Les services que je peux vous proposer.</p>
-                </div>
-                <!--services-box-container--------->
-                <div class="b-container">
-            <!--box-1------------------------------------->
-                    <div class="s-box">
-                    <!--img-->
-                        <div class="s-b-img">
-                    <!--title-->
-                            <div class="s-title">Front-End</div>
-                    <!--name-->
-                            <img src="image/Front-end.jpg">
-                        </div>
-                    <!--text-->
-                        <div class="s-b-text">
-                            <a href="#">With Divi, every part of your website is customizable. You have complete freedom to create the perfect website for you or your clients. Easily change colors, fonts and text styles. Apply stunning animations.</a>	
+<!--Experience------------------->
+        <section id="experience">
+            <div class="title-heading">
+                <h1>Parcours</h1>
+            </div>
+            <div class="timeline">
+                <div class="timeline-container">
+                    <div class="timeline-item" data-date="Février 2013">
+                        <div class="timeline-point"></div>
+                        <div class="timeline-content-right">
+                            <h3>Commercial</h3>
+                            <p>J'ai commencé ma carrière en tant que commercial, en développant mes compétences en gestion de clients et en négociation.</p>
                         </div>
                     </div>
-            <!--box-2------------------------------------>
-                    <div class="s-box">
-                    <!--img-->
-                        <div class="s-b-img">
-                    <!--title-->
-                            <div class="s-title">Back-End</div>
-                    <!--name-->
-                            <img src="image/Back-end.jpg">
-                        </div>
-                    <!--text-->
-                        <div class="s-b-text">
-                            <a href="#">With Divi, every part of your website is customizable. You have complete freedom to create the perfect website for you or your clients. Easily change colors, fonts and text styles. Apply stunning animations.</a>	
+                    <div class="timeline-item" data-date="Janvier 2023">
+                        <div class="timeline-point"></div>
+                        <div class="timeline-content-left">
+                            <h3>Transition vers le développement</h3>
+                            <p>J'ai décidé de me reconvertir en tant que développeur web, en suivant des formations intensives et en travaillant sur divers projets.</p>
                         </div>
                     </div>
-            <!--box-3------------------------------------>
-                    <div class="s-box">
-                    <!--img-->
-                        <div class="s-b-img">
-                    <!--title-->
-                            <div class="s-title">SEO</div>
-                    <!--name-->
-                            <img src="image/SEO.jpg">
-                        </div>
-                    <!--text-->
-                        <div class="s-b-text">
-                            <a href="#">With Divi, every part of your website is customizable. You have complete freedom to create the perfect website for you or your clients. Easily change colors, fonts and text styles. Apply stunning animations.</a>	
+                    <div class="timeline-item" data-date="Juillet 2024">
+                        <div class="timeline-point"></div>
+                        <div class="timeline-content-right">
+                            <h3>Accomplissements récents</h3>
+                            <p>J'ai finalisé plusieurs projets majeurs et je suis maintenant prêt à relever de nouveaux défis en tant que développeur web expérimenté.</p>
                         </div>
                     </div>
                 </div>
+            </div>
         </section>
+<!--Education------------------->
+        <section id="education">
+            <div class="title-heading">
+                <h1>Etudes</h1>
+            </div>
+            <div class="timeline">  
+                <div class="timeline-container reverse">
+                    <div class="timeline-item" data-date="Septembre 2015">
+                        <div class="timeline-point"></div>
+                        <div class="timeline-content-left">
+                            <h3>Bachelor en Informatique</h3>
+                            <p>J'ai suivi un programme intensif en informatique, en me spécialisant dans le développement web et la programmation.</p>
+                        </div>
+                    </div>
+                    <div class="timeline-item" data-date="Mars 2019">
+                        <div class="timeline-point"></div>
+                        <div class="timeline-content-right">
+                            <h3>Master en Développement Web</h3>
+                            <p>J'ai approfondi mes compétences en développement web et travaillé sur plusieurs projets importants en collaboration avec des entreprises.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+<!--skills---------------------->
+<section id="skills">
+    <div class="title-heading">
+        <h1>Compétences</h1>
+    </div>
+    <div class="skills-container">
+        <!-- Box for Back-End -->
+        <div class="skill-box" aria-labelledby="back-end-title">
+            <div class="box-face front">
+                <h2 id="back-end-title">Back-end</h2>
+            </div>
+            <div class="box-face back">
+                <i class="devicon-php-plain" aria-label="Php" role="img"></i>
+                <i class="devicon-java-plain" aria-label="Java" role="img"></i>
+                <i class="devicon-mysql-original" aria-label="MySql" role="img"></i>
+                <i class="devicon-symfony-original" aria-label="Symfony" role="img"></i>
+            </div>
+        </div>
+
+        <!-- Box for Front-End -->
+        <div class="skill-box" aria-labelledby="front-end-title">
+            <div class="box-face front">
+                <h2 id="front-end-title">Front-end</h2>
+            </div>
+            <div class="box-face back">
+                <i class="devicon-html5-plain" aria-label="Html5" role="img"></i>
+                <i class="devicon-css3-plain" aria-label="Css3" role="img"></i>
+                <i class="devicon-javascript-plain" aria-label="JavaScript" role="img"></i>
+            </div>
+        </div>
+
+        <!-- Box for Tools -->
+        <div class="skill-box" aria-labelledby="tools-title">
+            <div class="box-face front">
+                <h2 id="tools-title">Outils</h2>
+            </div>
+            <div class="box-face back">
+                <i class="devicon-git-plain" aria-label="Git" role="img"></i>
+                <i class="devicon-gitlab-plain" aria-label="Gitlab" role="img"></i>
+                <i class="devicon-npm-original-wordmark" aria-label="Npm" role="img"></i>
+                <i class="devicon-composer-line" aria-label="Composer" role="img"></i>               
+            </div>
+        </div>
+    </div>
+    
+</section>
 
 <!--portfolio------------------->
         <section id="portfolio">
@@ -179,30 +216,23 @@
                         <img src="images/w6.jpg">
                     </div>
         </section>
-
-<!--Contact-btn------------------>
-        <section id="contact-btn">  
-        <!--heading-------->
-            <h1 class="c-b-heading">Vous avez un projet ?</h1>
-            <!--btn-------->
-               <a href="#contact-form">Contactez moi</a>
-        </section>
-
 <!--Contact-form------------------>
-         <section id="contact-form">
-            <form action="">
-                <div class="contact-zone"></div>
-                    <h1 class="c-l-heading">Parlons de votre projet</h1>
+        <section id="contact-form">
+            <div class="title-heading">
+                <h1>Contact</h1>
+            </div>
+            <form action="send_email.php" method="POST">
+                <div class="contact-zone">
                     <div class="f-name">
-                        <input type="text" placeholder="Nom" id="name" required>
+                        <input type="text" name="name" placeholder="Nom" id="name" required>
                     </div>
                     <div class="f-mail">
-                        <input type="text" placeholder="Mail" id="mail" required>
+                        <input type="email" name="email" placeholder="Email" id="mail" required>
                     </div>
                 </div>
                 <div class="message-zone">
-                     <div class="message">
-                        <textarea name="message" id="message" rows="20" cols="40" placeholder="Ecrivez votre message..."></textarea>
+                    <div class="message">
+                        <textarea name="message" id="message" rows="8" placeholder="Votre message..." required></textarea>
                     </div>
                     <input type="submit" value="Envoyer">
                 </div>
@@ -212,6 +242,7 @@
     </main>
     <footer>
 
-    </footer> 
+    </footer>
+    <script src="script.js"></script>
 </body>
 </html>
