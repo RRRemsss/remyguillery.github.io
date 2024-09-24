@@ -10,7 +10,7 @@ html{
     scroll-behavior: smooth;
 }
 
-/************* HEADER *************/
+/******************************************************** HEADER ******************************************************/
 ul {
 	list-style: none;
 }
@@ -22,8 +22,6 @@ a {
 p, h3 {
 	font-family: barlow;
 }
-
-
 header {
 	padding:30px 50px;
 	position:relative;
@@ -36,11 +34,9 @@ header {
 	background-repeat: no-repeat;
 	background-image: url("../image/bg-profile.png");
 }
-
 .profile-img {
     display: none;
 }
-
 nav {
     display: flex;
     justify-content: center;
@@ -59,11 +55,9 @@ nav {
     box-shadow: 2px 2px 15px rgba(0,0,0,0.05);
     z-index: 1;
 }
- 
 .menu {
 	display: flex;
 }
-
 .menu li a {
     position: relative;
     padding: 10px 15px;
@@ -73,11 +67,9 @@ nav {
     text-decoration: none;
     transition: color 0.3s ease;
 }
-
 .menu li a.active {
     color: rgba(23,209,172,0.80) !important; 
 }
-
 /* Pseudo-élément ::after pour créer l'underline */
 .menu li a::after {
     content: ''; 
@@ -86,22 +78,15 @@ nav {
     bottom: 0;
     width: 0;
     height: 3px;
-    background-color: rgba(23, 209, 172, 0.80); /* Couleur verte */
+    background-color: rgba(23, 209, 172, 0.80);
     transition: width 0.3s ease;
 }
-
-/* Lorsque le lien est au survol, on étend l'underline */
 .menu li a:hover::after {
-    width: 100%; /* Étendre l'underline sur toute la largeur du texte */
+    width: 100%; 
 }
-
-
-
-/* Changer la couleur du texte au survol */
 .menu li a:hover {
-    color: rgba(23,209,172,0.80); /* Couleur du texte en vert au survol */
+    color: rgba(23,209,172,0.80);
 }
-
 /* .language a{
 	color:#292929;
 }
@@ -112,21 +97,17 @@ nav {
 	color:#292929;
 	font-family:barlow;
 } */
-
 ul.menu {
     display: flex;
     gap: 20px;
 }
-
 .toggle{
 	display: none;
 }
-
 .name{
     color: rgba(23,209,172,0.80);
     font-style: normal;
 }
-
 .speech {
 	font-family: barlow;
     width: 35em;
@@ -135,13 +116,11 @@ ul.menu {
     top: 50%;
     transform: translate(-20%,-50%);
 }
-
 .speech p:nth-child(1),.speech .description{
 	color: #6c707c;
     font-size: 1.1em;
 	text-align: left;
 }
-
 .speech h1 {
     font-family: poppins;
     font-size: 2.5em;
@@ -149,7 +128,6 @@ ul.menu {
     letter-spacing: 2.5px;
     color: #191919;
 }
-
 .cv-btn {
     width: 10vw;
     height: 5vh;
@@ -161,45 +139,24 @@ ul.menu {
     font-size: 1.3em;
     border-radius: 8px;
 }
-
 .cv-btn:hover {
 	background-color: rgba(23,209,172,0.80);
 	transition: all ease 0.5s;
 	color: #191919
 }
-
 .networks{
 	display: flex;
 	align-items: center;
 	gap: 15px;
 }
- 
-.github {
-    display: flex;
-    align-items: center;
-}
-
-.github a {
-	margin: 6px 12px;
-}
-
-.github i {
-	color:rgba(18,17,17,0.40);
-	font-size: 1.5em;
-	transition: all ease 0.5s;
-}
-
-.github:hover i {
-	color:rgba(23,209,172,0.80);
-}
-
 .title-heading h1 {
     color: rgba(23,209,172,0.80);
     font-size: 3rem;
     text-align: center;
 }
 
-/************* GLOBAL TIMELINE *************/
+/******************************************************** EXPERIENCE ******************************************************/
+/************************** GLOBAL TIMELINE ************************/
 .timeline {
     display: flex;
     flex-direction: column;
@@ -209,7 +166,6 @@ ul.menu {
     max-width: 1000px;
     position: relative;
 }
-
 /* Ligne verticale de la timeline */
 .timeline::before {
     content: '';
@@ -221,7 +177,8 @@ ul.menu {
     transform: translateX(-50%);
 }
 
-/************* EXPERIENCE *************/
+
+
 #experience {
     width: 100%;
     background-color: #191919;
@@ -229,15 +186,12 @@ ul.menu {
     padding: 50px;
     position: relative;
 }
-
-/* Styles for the timeline container for Experience */
 .timeline-container {
     position: relative;
     display: flex;
     flex-direction: column;
     gap: 50px;
 }
-
 .timeline-item {
     position: relative;
     display: flex;
@@ -246,7 +200,6 @@ ul.menu {
     transform: translateY(50px);
     transition: all 0.5s ease-in-out;
 }
-
 .timeline-point {
     width: 20px;
     height: 20px;
@@ -265,25 +218,18 @@ ul.menu {
     max-width: 400px;
     text-align: left;
 }
-
-/* Spécifique pour le contenu aligné à droite */
 .content-right {
-    margin-left: 500px; /* Décale le contenu à droite de la ligne de temps */
+    margin-left: 500px; /* Shift the content to the right of the timeline */
 }
-
-/* Spécifique pour le contenu aligné à gauche */
 .content-left {
-    margin-right: 500px; /* Décale le contenu à gauche de la ligne de temps */
+    margin-right: 500px; /* Shift the content to the left of the timeline */
 }
-
 .content-left h3 {
 	text-align: right;
 }
-
 .content-right h3 {
 	text-align: left;
 }
-
 .keyword{
 	font-weight: bold;
 	color: rgba(23,209,172,0.80);
@@ -295,7 +241,7 @@ ul.menu {
     border-radius: 8px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     max-width: 400px;
-    margin-left: 500px; /* Move content to the right of the timeline */
+    margin-left: 500px; /* Shift content to the right of the timeline */
     text-align: left;
 }
 
@@ -305,7 +251,7 @@ ul.menu {
     border-radius: 8px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     max-width: 400px;
-    margin-right: 500px; /* Move content to the right of the timeline */
+    margin-right: 500px; /* Shift content to the right of the timeline */
     text-align: left;
 }
 
@@ -335,7 +281,6 @@ ul.menu {
 	font-family: barlow;
 }
 
-/* Align left */
 .align-left .year {
     left: 100%;
     transform: translate(-100%, -50%);
@@ -346,7 +291,6 @@ ul.menu {
     transform: translate(-150%, -50%);
 }
 
-/* Align right */
 .align-right .year {
     right: 100%;
     transform: translate(100%, -50%);
@@ -357,7 +301,7 @@ ul.menu {
     transform: translate(150%, -50%);
 }
 
-/************* EDUCATION *************/
+/******************************************************** EDUCATION ******************************************************/
 #education {
     width: 100%;
     box-sizing: border-box;
@@ -373,9 +317,9 @@ ul.menu {
 
 /* Reverse the text and point positions for Education */
 .timeline-container.reverse .content-left .content-right{
-    margin-right: 50px; /* Move content to the left of the timeline */
+    margin-right: 50px; 
     margin-left: 0;
-    text-align: right; /* Align text to the right */
+    text-align: right; 
 }
 
 
@@ -384,8 +328,7 @@ ul.menu {
     transform: translateX(-50%) translateY(-50%);
 }
 
-
-/************* SKILLS *************/
+/******************************************************** SKILLS ******************************************************/
 #skills {
     width: 100%;
     box-sizing: border-box;
@@ -440,15 +383,15 @@ ul.menu {
     position: relative; /* Allows positioning of icons */
     display: flex;
     flex-wrap: wrap; /* Allows icons to wrap to next line */
-    padding: 10px; /* Adds padding around icons */
+    padding: 10px;
 	background-color: #f4f7ff; 
 	color: #191919
 }
 
 /* Position icons based on specified order */
 .box-face i {
-    font-size: 3rem; /* Adjust the icon size if needed */
-    position: absolute; /* Absolute positioning for custom layout */
+    font-size: 3rem; 
+    position: absolute;
 }
 
 /* 1. Centered at the top */
@@ -511,7 +454,7 @@ ul.menu {
     visibility: visible;
 }
 
-/************* PORTFOLIO *************/
+/******************************************************** PORTFOLIO ******************************************************/
 #portfolio{
 	width:100%;
 	box-sizing: border-box;
@@ -594,7 +537,7 @@ ul.menu {
 	
 }
 
-/*********************************************** CONTACT *****************************************/
+/******************************************************** FOOTER ******************************************************/
 #stay-in-touch {
     text-align: center;
     padding: 20px;
@@ -602,19 +545,21 @@ ul.menu {
     box-shadow: 15px 2px 15px rgba(0, 0, 0, 0.50);
 }
 
-/* Répartit uniformément les colonnes dans le footer */
+
 .footer-container {
     display: flex;
-    justify-content: space-evenly; /* Répartit uniformément les colonnes */
+    justify-content: space-evenly;
     max-width: 100%;
     margin: 0 auto;
-    align-items: center; /* Aligne les items verticalement */
+    align-items: center; 
+    height: 35vh;
 }
 
-/* Pour chaque contact-item, les icônes et le texte sont alignés horizontalement */
+/* For each contact-item, the icons and text are horizontally aligned */
 .contact-item {
     display: flex;
-    align-items: center; /* Aligne les icônes et le texte horizontalement */
+    align-items: center; /* Align the icons and text horizontally */
+
     margin-bottom: 10px;
 }
 
@@ -623,13 +568,13 @@ ul.menu {
 }
 
 .contact-item a:hover {
-    color: rgba(23, 209, 172, 0.80); /* Change color on hover to match icon */
+    color: rgba(23, 209, 172, 0.80);
 }
 
 .contact-item i {
     font-size: 30px;
     color: rgba(23, 209, 172, 0.80);
-    margin-right: 10px; /* Espace entre l'icône et le texte */
+    margin-right: 10px; /* Space between the icône and the text */
 }
 
 .contact-item p, .contact-item a {
@@ -638,7 +583,6 @@ ul.menu {
     text-decoration: none;
 }
 
-/* Colonne "Contactez-moi" (photo et titre) */
 .contact-profile {
     display: flex;
     flex-direction: column;
@@ -652,16 +596,16 @@ ul.menu {
     margin-bottom: 10px;
 }
 
-/* Pour centrer les icônes et le texte dans les colonnes de contact */
 .contact-info, .contact-networks {
     display: flex;
     flex-direction: column;
     justify-content: center;
-    align-items: flex-start; /* Aligne les éléments à gauche tout en centrant la colonne */
+    align-items: flex-start;
 }
 
-.contact h1 {
+.contactMe {
     color: rgba(23, 209, 172, 0.80);
+    font-size: 2em;
 }
 
 .contact-item a:hover {
@@ -697,7 +641,7 @@ ul.menu {
 
 @media screen and (max-width: 970px) {
 
-/*********************************** HEADER *****************************************/
+/*********************************************** HEADER *************************************************/
     header{
         background-image: none !important;
         background-image: url("../image/profile-rond.png");
@@ -723,7 +667,7 @@ ul.menu {
     .menu li {
         margin: 15px 0;
         text-align: center;
-        font-size: 24px; /* Increase font size for better visibility */
+        font-size: 24px;
     }
 
     /* Make the menu visible when active */
@@ -737,7 +681,7 @@ ul.menu {
 	.toggle {
 		display: block;
 		cursor: pointer;
-		font-size: 24px; /* Adjust as needed */
+		font-size: 24px;
 		z-index: 11;
 	}
 
@@ -803,9 +747,9 @@ ul.menu {
 	}
     .profile-img {
         display: block;
-        width: 50%; /* Ajuster la taille selon tes besoins */
+        width: 50%; 
         height: auto;
-        margin: 60px auto; /* Centrer l'image horizontalement */
+        margin: 60px auto; /* Center the image horizontally */
     }
 
     .networks {
@@ -823,93 +767,103 @@ ul.menu {
     }
 
 /******************************************** EXPERIENCE / EDUCATION **************************************************/
-    /* Faire en sorte que la timeline soit à gauche */
+    /* Make the timeline align to the left */
     .timeline::before {
-        left: 0px; /* Déplace la ligne de la timeline à gauche */
-        transform: translateX(0); /* Pas de translation car la barre est déjà sur la gauche */
+        left: 5px; /* Move the timeline line to the left */
+        transform: translateX(0); /* No translation since the bar is already on the left */
     }
 
-    /* Aligner le contenu des boîtes à droite de la barre */
+    /* Align the content of the boxes to the right of the bar */
     .timeline-content {
-        max-width: 100%; /* Limiter la largeur des boîtes */
+        max-width: 100%; /* Limit the width of the boxes */
         text-align: left;
-        margin-left: 60px; /* Décale le contenu vers la droite par rapport à la barre */
+        margin-left: 70px; /* Shift content to the right relative to the bar */
+        margin-right: 0;
     }
 
-    /* Ajuster les points de la timeline pour qu'ils restent alignés sur la barre */
+    /* Adjust the points of the timeline to keep them aligned on the bar */
     .timeline-point {
-        width: 20px;
-        height: 20px;
-        border-radius: 50%;
-        position: absolute;
-        left: calc(0% - 28px); /* Centrer le point en fonction de sa largeur */
-        transform: translateX(0); /* Pas de translation supplémentaire */
-        z-index: 1;
-        cursor: pointer;
+        left: calc(0% - 13px); /* Center the point based on its width */
     }
-    /* Retirer les marges spécifiques gauche/droite des contenus */
+
+    /* Place the date (year) to the left of the points */
+    .timeline-point .year {
+        position: absolute;
+        left: calc(0% - 42px); /* Center the point based on its width */
+        transform: translateY(-50%);
+        font-size: 0.9em;
+        color: rgba(23, 209, 172, 0.80);
+    }
+
+    .timeline-item.active .year {
+        opacity: 1; /* The year becomes visible */
+    }
+
+    /* Remove specific left/right margins from the contents */
     .content-left,
     .content-right {
         margin: 0;
+        text-align: left;
     }
 
-    /* Réduire l'espace entre les éléments de la timeline pour un affichage compact */
+    /* Reduce space between timeline elements for a compact display */
     .timeline-container {
         gap: 20px;
     }
 
     .content-left h3 {
         text-align: left;
+        font-size: 1.2em;
     }
 
     .timeline-container.reverse .timeline-point {
-        left: calc(0% - 18px); /* Centrer le point en fonction de sa largeur */
+        left: calc(0% - 13px); /* Center the point based on its width */
         transform: translateX(-50%) translateY(-50%);
     }
 
-/******************************************** SKILL **************************************************/
+/********************************************** SKILL ****************************************************/
 
     .skills-container {
-        flex-direction: column; /* Empile les boxes */
+        flex-direction: column; /* Stack the boxes */
         padding: 20px;
-        align-items: center; /* Centrer les boxes */
+        align-items: center; /* Center the boxes */
     }
 
     .skill-box {
-        width: 170px; /* Réduire la taille */
+        width: 170px; /* Reduce the size */
         height: 170px;
-        margin-bottom: 40px; /* Espacement entre les boxes */
+        margin-bottom: 40px; /* Space between the boxes */
     }
 
     .skill-box.flipped {
-        transform: rotateY(180deg); /* Rotation pour afficher le verso */
+        transform: rotateY(180deg); /* Rotate to display the back */
     }
 
     .box-face {
-        width: 100%; /* Prendre toute la largeur de la box */
-        height: 100%; /* Prendre toute la hauteur de la box */
-        position: absolute; /* Positionner correctement */
+        width: 100%; /* Take the full width of the box */
+        height: 100%; /* Take the full height of the box */
+        position: absolute; /* Position correctly */
         display: flex;
-        justify-content: center; /* Centrer le contenu */
-        align-items: center; /* Centrer le contenu */
-        backface-visibility: hidden; /* Cacher la face arrière */
-        border-radius: 10px; /* Arrondir les coins si besoin */
-        box-sizing: border-box; /* Inclure padding et bordure dans la taille */
-
+        justify-content: center; /* Center the content */
+        align-items: center; /* Center the content */
+        backface-visibility: hidden; /* Hide the back face */
+        border-radius: 10px; /* Round the corners if needed */
+        box-sizing: border-box; /* Include padding and border in the size */
     }
 
     .box-face.back {
-        transform: rotateY(180deg); /* Positionne la face arrière */
+        transform: rotateY(180deg); /* Position the back face */
     }
 
     .box-face i {
-        font-size: 2.5rem; /* Ajuste la taille des icônes */
+        font-size: 2.5rem; /* Adjust the size of the icons */
     }
 
-    /* Ajuste la position des icônes */
+    /* Adjust the position of the icons */
     .box-face i:nth-child(1) {
         top: 15%;
     }
+
 
     .box-face i:nth-child(2),
     .box-face i:nth-child(3) {
@@ -926,9 +880,7 @@ ul.menu {
         transform: translate(-50%, -50%);
     }
 
-
 /****************************************** PORTFOLIO *************************************************/
-
 	.p-container{
 		grid-template-columns:1fr 1fr;
         grid-template-rows:auto;
@@ -938,9 +890,57 @@ ul.menu {
 	}
 
 /******************************************** FOOTER *************************************************/
-footer{
+    .contact-item p,
+    .contact-item a,
+    .contact-item i {
+        margin: 0;
+        padding: 0;
+    }  
+    .footer-container {
+        display: flex;
+        flex-direction: column; 
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+        height: auto; 
+    }
+    .contact-profile img {
+        display: none; 
+    }
+    .contactMe {
+        font-weight: bold;
+        margin-bottom: 50px; 
+        text-align: center;
+    }
+    .contact-info {
+        justify-content: flex-start; 
+        align-items: flex-start; 
+        margin-bottom: 10px; 
+        text-align: left; 
+        width: 100%; 
+        padding-left: 20px; 
+    }
+    .contact-item i {
+        margin-right: 15px; /* Space between the icon and the text */
+    }
     
-}
+    .contact-item {
+        margin-bottom: 20px; /* Space between the items */
+    }
+    
+    .contact-networks {
+        justify-content: flex-start; 
+        align-items: flex-start; 
+        margin-top: 20px; /* Add spacing from contact-info */
+        text-align: left; 
+        width: 100%;
+        padding-left: 20px; 
+    }    
+    .copyright {
+        margin-top: 20px;
+        text-align: center;
+        justify-content: center;
+    }
 
 }
  
@@ -950,12 +950,6 @@ footer{
 		grid-template-rows: auto;}
 
 	.speech{
-		width:60%;
-	}
-	
-	
-	.github{
-		left: 30px;
-		transform: translateX(-10px);
+		width:90%;
 	}
 }

@@ -1,56 +1,72 @@
 document.addEventListener("DOMContentLoaded", () => {
-    // Gérer l'interaction avec les éléments de la timeline
+/************************ Handle interaction with timeline elements ************************************/ 
     const timelineItems = document.querySelectorAll(".timeline-item");
 
     const timelineObserver = new IntersectionObserver((entries) => {
         entries.forEach(entry => {
             if (entry.isIntersecting) {
-                entry.target.classList.add('active'); // Ajouter la classe 'active' lorsque l'élément est visible
+                entry.target.classList.add('active'); // Add the 'active' class when the element is visible
             } else {
-                entry.target.classList.remove('active'); // Retirer 'active' quand l'élément n'est plus visible
+                entry.target.classList.remove('active'); // Remove 'active' when the element is no longer visible
             }
         });
     }, {
-        threshold: 0.3 // 30% de l'élément doit être visible pour déclencher
+        rootMargin: '0px 0px -20% 0px', // Adjust the margin to better detect the end of the page
+        threshold: 0.3 // 40% of the section must be visible
     });
 
     timelineItems.forEach(item => timelineObserver.observe(item));
 
-    // Gérer l'interaction avec le menu de navigation
-    const sections = document.querySelectorAll("section");
+/************************ Handle interaction with the navigation menu **********************************/ 
+    const sections = document.querySelectorAll("section, footer");
     const navLinks = document.querySelectorAll(".menu li a");
 
     const navObserver = new IntersectionObserver((entries) => {
         entries.forEach(entry => {
             if (entry.isIntersecting) {
-                // Retirer la classe active de tous les liens
+                // Remove the active class from all links
                 navLinks.forEach(link => link.classList.remove("active"));
-                
-                // Ajouter la classe active au lien correspondant à la section visible
+
+                // Add the active class to the link corresponding to the visible section
                 const id = entry.target.getAttribute("id");
                 const activeLink = document.querySelector(`.menu li a[href="#${id}"]`);
+
+                // If it is the footer or a visible section, add the active class
                 if (activeLink) {
                     activeLink.classList.add("active");
                 }
             }
         });
     }, {
-        threshold: 0.4 // 40% de la section doit être visible
+        threshold: 0.4, 
+        rootMargin: '0px 0px -20% 0px' 
     });
 
     sections.forEach(section => navObserver.observe(section));
 
-    // Gérer l'interaction avec le bouton toggle du menu (burger)
+/************* Handle activation of the "About" section when the user is at the top of the page ****************/ 
+    window.addEventListener('scroll', () => {
+        if (window.scrollY === 0) {
+            // If the user is at the top, activate the "About" link
+            navLinks.forEach(link => link.classList.remove("active")); // Remove 'active' from other links
+            const aboutLink = document.querySelector('.menu li a[href="#about"]');
+            if (aboutLink) {
+                aboutLink.classList.add('active');
+            }
+        }
+    });
+
+/********************* Handle interaction with the toggle button (burger menu) ********************************/ 
     const toggleButton = document.querySelector('.toggle');
     const menu = document.querySelector('.menu');
-    const body = document.body; // Pour désactiver le scroll
+    const body = document.body; // To disable scrolling
 
-    // Ajouter un écouteur d'événement pour le clic sur le toggle button (burger)
+    // Add an event listener for click on the toggle button (burger)
     toggleButton.addEventListener('click', () => {
-        // Alterner la classe 'active-menu' sur le menu
+        // Toggle the 'active-menu' class on the menu
         menu.classList.toggle('active-menu');
 
-        // Ajouter ou retirer la classe 'no-scroll' pour désactiver/activer le scroll
+        // Add or remove the 'no-scroll' class to disable/enable scrolling
         if (menu.classList.contains('active-menu')) {
             body.classList.add('no-scroll');
         } else {
@@ -58,21 +74,22 @@ document.addEventListener("DOMContentLoaded", () => {
         }
     });
 
-    // Fermer le menu lorsque l'utilisateur clique sur un lien (pour les écrans <= 970px)
+    // Close the menu when the user clicks on a link (for screens <= 970px)
     navLinks.forEach(link => {
         link.addEventListener('click', function () {
             if (window.innerWidth <= 970) {
-                menu.classList.remove('active-menu'); // Rétracter le menu
-                body.classList.remove('no-scroll');   // Réactiver le scroll
+                menu.classList.remove('active-menu'); // Collapse the menu
+                body.classList.remove('no-scroll');   // Reactivate scrolling
             }
         });
     });
 
+/********************* Handle interaction with the skill boxes (flip) ********************************/ 
     const skillBoxes = document.querySelectorAll('.skill-box');
 
     skillBoxes.forEach(box => {
         box.addEventListener('click', () => {
-            // Basculer la classe 'flipped' sur la box cliquée
+            // Toggle the 'flipped' class on the clicked box
             box.classList.toggle('flipped');
         });
     });
